@@ -16,7 +16,6 @@ class Perceptron:
         return (- 1 / m) * np.sum(Y * np.log(A) + (1 - Y) * (np.log(1 - A)))
 
     def forward(self, X, W, b):
-        X = np.array(X)
         z = np.dot(W.T, X) + b
         return self.sigmoid(z)
 
