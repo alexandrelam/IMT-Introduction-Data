@@ -19,3 +19,15 @@ def accuracy(testY, predictions):
         if predictions[i] < 0.5 and testY[i] == 0:
             count += 1
     return count / len(testY)
+
+
+def kmeans_split(arr, prediction):
+    a = []
+    b = []
+    for i in range(len(arr)):
+        if prediction[i]:
+            a.append(arr[i])
+        else:
+            b.append(arr[i])
+
+    return a, b
